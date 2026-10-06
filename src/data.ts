@@ -3,7 +3,7 @@ import houseLandExterior from './assets/services/house-and-land-exterior.webp'
 const img = (id: string, w = 1600) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
 
-export const COMPANY = 'NextGen Building'
+export const COMPANY = 'NextGen Real Estate & Development Consultant'
 export const PHONE = '0470 067 522'
 export const EMAIL = 'info@nextgenbuilding.com.au'
 export const PERSONAL_EMAIL = 'mhasan2167@mail.com'
@@ -11,13 +11,13 @@ export const ADDRESS = '23A Waratah Cr, Macquarie Fields NSW 2564'
 
 export const about = {
   intro:
-    'NextGen is a dedicated artisan building company committed to delivering quality craftsmanship while prioritising sustainability. Our mission is to integrate green energy solutions into every project, so that every building we deliver meets the highest standards of quality and contributes positively to the environment.',
+    'NextGen is a real estate and development consultancy that guides clients towards quality craftsmanship while prioritising sustainability. We help you integrate green energy solutions into every project and lead you along the right pathway, so that every property meets the highest standards of quality and contributes positively to the environment.',
   community:
-    'Every project we undertake comes with a unique offering: free community library facilities. This commitment is a core part of our values and a prerequisite for project acceptance. We believe that enhancing community resources fosters a sense of belonging and supports lifelong learning.',
+    'Every project we take on comes with a unique offering: free community library facilities. This commitment is a core part of our values and a prerequisite for project acceptance. We believe that enhancing community resources fosters a sense of belonging and supports lifelong learning.',
   clientCentric:
     'We involve clients in every step of the process, from the initial concept to the final product. This collaborative approach adds value to every project, gives our clients real pride in the result, and ensures their vision is realised with confidence.',
   summary:
-    'NextGen is more than just a building company; we are a partner in creating sustainable, community-focused and client-driven projects. Together, we build not just structures, but a better future for our communities.',
+    'NextGen is the next step to simplifying and efficiently managing all of your real estate needs. We work with you to achieve the best real estate solution, and we are a partner in creating sustainable, community-focused and client-driven projects that build a better future for our communities.',
 }
 
 // Not shown on the site for now (Project menu removed); kept for a future projects page
@@ -68,7 +68,7 @@ export const heroSlides = [
   {
     image: img('1502005229762-cf1b2da7c5d6'),
     title: 'Quality Craftsmanship, Built Sustainably',
-    text: 'NextGen Building delivers artisan-quality homes with green energy solutions in every project.',
+    text: 'NextGen guides you to artisan-quality homes, with green energy solutions considered in every project.',
   },
   {
     image: img('1484154218962-a197022b5858'),
@@ -77,8 +77,8 @@ export const heroSlides = [
   },
   {
     image: img('1493809842364-78817add7ffb'),
-    title: 'Your Vision, Built Together',
-    text: 'From the first concept to the final handover, you are involved in every step of your build.',
+    title: 'Your Real Estate Needs, Simplified',
+    text: 'From the first concept to the final handover, we guide you through every step of your real estate journey.',
   },
 ]
 
@@ -95,7 +95,7 @@ export const services = [
     title: 'House & Land Package',
     slug: 'house-and-land-package',
     image: img('1600596542815-ffad4c1539a9', 700),
-    text: 'A complete package pairing the right block with a quality-built home, ready for you to move in.',
+    text: 'We guide you to the right block and a quality-built home, packaged together and ready for you to move in.',
   },
   {
     title: 'Turnkey Home',
@@ -113,7 +113,7 @@ export const services = [
     title: 'Extensions & Renovations',
     slug: 'house-extension',
     image: img('1613490493576-7fde63acd811', 700),
-    text: 'From house extensions to full renovations, we transform the home you already have.',
+    text: 'From house extensions to full renovations, we guide you in transforming the home you already have.',
   },
 ]
 
@@ -121,9 +121,9 @@ export const vision = {
   banner: img('1600585154340-be6161a56a0c'),
   image: img('1600210492486-724fe5c67fb0', 1200),
   statement:
-    'Our vision is a future where every home is built to last, powered by clean energy and connected to a thriving community. We want every NextGen project to leave its neighbourhood better than we found it.',
+    'Our vision is a future where every home is built to last, powered by clean energy and connected to a thriving community. We want every project we guide to leave its neighbourhood better than we found it.',
   detail:
-    'We see building as more than putting up structures. Each home, extension or development is a chance to raise the standard of craftsmanship, reduce environmental impact and give something back to the people who live nearby.',
+    'We see real estate as more than buying, selling or building. Each home, extension or development we consult on is a chance to raise the standard of craftsmanship, reduce environmental impact and give something back to the people who live nearby.',
   pillars: [
     {
       title: 'Sustainable Living',
@@ -144,17 +144,17 @@ export const mission = {
   banner: img('1503387762-592deb58ef4e'),
   image: img('1586023492125-27b2c045efd7', 900),
   statement:
-    'Our mission is to deliver quality craftsmanship while integrating green energy solutions into every project, so that each building meets the highest standards of quality and contributes positively to the environment.',
+    'Our mission is to simplify and efficiently manage all of our clients’ real estate needs, guiding them towards quality craftsmanship and green energy solutions so that every project meets the highest standards of quality and contributes positively to the environment.',
   detail:
-    'We achieve this by combining skilled trades, careful project management and genuine collaboration with our clients, from the initial concept to the final handover.',
+    'We achieve this by combining real estate expertise, careful project management and genuine collaboration with our clients, guiding them along the right pathway from the initial concept to the final handover.',
   commitments: [
     {
       title: 'Quality Craftsmanship',
-      text: 'Every project is delivered with artisan care, premium materials and attention to detail at each stage of construction.',
+      text: 'We guide every project towards artisan care, premium materials and attention to detail, connecting you with the right professionals at each stage.',
     },
     {
-      title: 'Green Energy in Every Build',
-      text: 'We integrate sustainable, energy-efficient solutions into all of our projects as standard, not as an optional extra.',
+      title: 'Green Energy in Every Project',
+      text: 'We advise on sustainable, energy-efficient solutions for all of our projects as standard, not as an optional extra.',
     },
     {
       title: 'Free Community Libraries',
@@ -213,7 +213,7 @@ export const reviews = [
 export type ServiceDetail = {
   slug: string
   title: string
-  category: 'Building services' | 'Project management'
+  category: 'Real estate services' | 'Project management'
   images: string[]
   // First paragraph; the service title is shown in bold wherever it appears
   intro: string
@@ -227,23 +227,23 @@ export const serviceDetails: ServiceDetail[] = [
   {
     slug: 'house-and-land-package',
     title: 'House & Land Package',
-    category: 'Building services',
+    category: 'Real estate services',
     images: [houseLandExterior, img('1600585154340-be6161a56a0c'), img('1600566753190-17f0baa2a6c3')],
     intro:
-      'Want to build without juggling a land purchase and a builder separately? A House & Land Package brings the right block and a quality-built home together in one simple process.',
-    listIntro: 'We help you find suitable land and design a home that fits it, making our packages a great choice for:',
+      'Want to build without juggling a land purchase and a builder separately? With a House & Land Package, we guide you to the right block and a quality-built home in one simple process.',
+    listIntro: 'We help you find suitable land and the right home design for it, making our packages a great choice for:',
     list: [
       'First-home buyers who want a clear, all-in-one price',
       'Investors looking for a new, low-maintenance property',
       'Families moving into growing communities',
     ],
     closing:
-      'Every package includes energy-efficient design, quality inclusions and one team managing the build from approvals to handover.',
+      'Every package we recommend focuses on energy-efficient design and quality inclusions, with our team guiding and managing the process from approvals to handover.',
   },
   {
     slug: 'turnkey-home',
     title: 'Turnkey Home',
-    category: 'Building services',
+    category: 'Real estate services',
     images: [img('1600607687939-ce8a6c25118c'), img('1600210492486-724fe5c67fb0'), img('1484154218962-a197022b5858')],
     intro:
       'A Turnkey Home is finished down to the last detail, so all you need to do is unlock the door and move in.',
@@ -254,27 +254,27 @@ export const serviceDetails: ServiceDetail[] = [
       'Landscaping, fencing and driveway',
     ],
     closing:
-      'It is the simplest way to own a brand new home, with no extra trades to organise once the build is done.',
+      'It is the simplest way to own a brand new home, and we guide you through every step so there is nothing left to organise.',
   },
   {
     slug: 'land-sale',
     title: 'Land Sale',
-    category: 'Building services',
+    category: 'Real estate services',
     images: [img('1558904541-efa843a96f01'), img('1541888946425-d81bb19240f5'), img('1600585154340-be6161a56a0c')],
     intro:
-      'Choosing the right block is the first step to a great home. Through our Land Sale service, we offer land that is ready to build on, backed by a builder’s advice.',
+      'Choosing the right block is the first step to a great home. Through our Land Sale service, we help you find land that is ready to build on, backed by expert real estate advice.',
     listIntro: 'Before you buy, we walk you through what each block means for your future home:',
     list: [
       'Orientation, slope and soil conditions',
       'Access to services such as water, sewer and power',
       'Council and zoning requirements',
     ],
-    closing: 'You can buy the land on its own or bundle it with one of our house and land packages.',
+    closing: 'You can buy the land on its own or bundle it into a house and land package.',
   },
   {
     slug: 'granny-flat',
     title: 'Granny Flat',
-    category: 'Building services',
+    category: 'Real estate services',
     images: [img('1512917774080-9991f1c4c750'), img('1564013799919-ab600027ffc6'), img('1600607687939-ce8a6c25118c')],
     intro:
       'A Granny Flat adds valuable living space to your property, built to the same standard as a new home.',
@@ -285,58 +285,58 @@ export const serviceDetails: ServiceDetail[] = [
       'Homeowners looking for extra rental income',
     ],
     closing:
-      'We handle the design, approvals and construction, with energy-efficient features that keep running costs low.',
+      'We guide you through design, approvals and construction, recommending energy-efficient features that keep running costs low.',
   },
   {
     slug: 'studio',
     title: 'Studio',
-    category: 'Building services',
+    category: 'Real estate services',
     images: [img('1581858726788-75bc0f6a952d'), img('1586023492125-27b2c045efd7'), img('1555041469-a586c61ea9bc')],
     intro:
       'Need a quiet place to work or create? A backyard Studio gives you a dedicated space just steps from your home.',
     listIntro: 'Our studios are insulated, naturally lit and fully powered, making them perfect as:',
     list: ['A home office away from household noise', 'A creative studio or music room', 'A home gym or personal retreat'],
-    closing: 'Each studio is designed to suit your backyard and budget, without the cost of a full extension.',
+    closing: 'We help you plan a studio that suits your backyard and budget, without the cost of a full extension.',
   },
   {
     slug: 'house-extension',
     title: 'House Extension',
-    category: 'Building services',
+    category: 'Real estate services',
     images: [img('1600566753190-17f0baa2a6c3'), img('1600047509807-ba8f99d2cdde'), img('1600596542815-ffad4c1539a9')],
     intro:
       'Love where you live but need more room? A House Extension gives your family extra space without the cost and stress of moving.',
-    listIntro: 'We design and build extensions that blend seamlessly with your home, including:',
+    listIntro: 'We guide you to extensions that blend seamlessly with your home, including:',
     list: ['Ground-floor living areas and bedrooms', 'First-floor additions', 'Larger kitchens and open-plan spaces'],
     closing:
-      'Our team manages the site carefully while you live at home, keeping disruption to a minimum from start to finish.',
+      'We help plan and coordinate the work around your family while you live at home, keeping disruption to a minimum from start to finish.',
   },
   {
     slug: 'landscaping',
     title: 'Landscaping',
-    category: 'Building services',
+    category: 'Real estate services',
     images: [img('1564013799919-ab600027ffc6'), img('1558904541-efa843a96f01'), img('1600585154340-be6161a56a0c')],
     intro:
       'Great Landscaping turns your yard into a space you will actually use, and completes the look of your home.',
-    listIntro: 'We design and build practical, low-maintenance outdoor areas, including:',
+    listIntro: 'We help you plan practical, low-maintenance outdoor areas, including:',
     list: ['Gardens, lawns and planting', 'Paving, pathways and retaining walls', 'Outdoor entertaining areas'],
-    closing: 'We choose plants and materials suited to local conditions, so your garden looks good all year round.',
+    closing: 'We recommend plants and materials suited to local conditions, so your garden looks good all year round.',
   },
   {
     slug: 'driveway',
     title: 'Driveway',
-    category: 'Building services',
+    category: 'Real estate services',
     images: [img('1600047509807-ba8f99d2cdde'), img('1600566753190-17f0baa2a6c3'), img('1600585154340-be6161a56a0c')],
     intro:
       'Your Driveway is the first thing visitors see and takes wear every day, so it needs to look good and last.',
-    listIntro: 'We build new driveways and replace old ones in a range of finishes:',
+    listIntro: 'We advise on new and replacement driveways in a range of finishes:',
     list: ['Plain and coloured concrete', 'Exposed aggregate', 'Pavers'],
     closing:
-      'Every driveway starts with proper base preparation and drainage, and we take care of council crossover requirements.',
+      'We make sure every driveway starts with proper base preparation and drainage, and guide you through council crossover requirements.',
   },
   {
     slug: 'full-renovation',
     title: 'Full Renovation',
-    category: 'Building services',
+    category: 'Real estate services',
     images: [img('1484154218962-a197022b5858'), img('1600210492486-724fe5c67fb0'), img('1502005229762-cf1b2da7c5d6')],
     intro:
       'A Full Renovation gives your existing home a complete fresh start, without the need to move.',

@@ -19,7 +19,7 @@ const contactCards: { icon: IconType; label: string; value: string; href: string
 ]
 
 const serviceGroups: OptionGroup[] = [
-  { label: 'Building services', options: allServices },
+  { label: 'Real estate services', options: allServices },
   { label: 'Project management', options: projectManagement },
   { label: 'Not sure yet', options: ['Other / General enquiry'] },
 ]

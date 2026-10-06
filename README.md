@@ -1,6 +1,6 @@
-# NextGen Building – Website
+# NextGen Real Estate & Development Consultant – Website
 
-Marketing website for **NextGen Building**, an artisan building company in South West Sydney that delivers quality craftsmanship with green energy solutions and free community library facilities in every project.
+Marketing website for **NextGen Real Estate & Development Consultant** (short form: NextGen Reality & Consultant), a real estate and development consultancy in South West Sydney that guides clients towards quality craftsmanship, green energy solutions and free community library facilities in every project.
 
 Built with React, TypeScript, Vite and Tailwind CSS. The layout and styling follow a Bootstrap-style design system (container widths, spacing and type scale) recreated in Tailwind.
 

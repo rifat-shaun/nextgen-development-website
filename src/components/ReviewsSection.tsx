@@ -53,7 +53,7 @@ function ReviewsSection() {
             <h2 className="!text-[2rem] md:!text-[2.5rem]">WHAT OUR CLIENTS SAY</h2>
             <span className="mx-auto mb-5 mt-4 block h-[3px] w-16 rounded-full bg-accent md:mx-0" />
             <p className="m-0 text-base leading-[1.6] text-[#666]">
-              Hear from the families and investors we have built with.
+              Hear from the families and investors we have worked with.
             </p>
           </div>
           <div className="flex gap-3">

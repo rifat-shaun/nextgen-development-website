@@ -62,7 +62,7 @@ function About() {
         <div className="container-bs">
           <SectionTitle
             title="WHAT OUR VISION MEANS"
-            intro="Three principles guide every home, extension and development we deliver."
+            intro="Three principles guide every home, extension and development we consult on."
           />
           <div className="reveal grid gap-6 md:grid-cols-3">
             {vision.pillars.map((pillar, i) => {
@@ -138,7 +138,7 @@ function About() {
       <CallToAction
         className="bg-[#f8f9fa]"
         title="Let's Build a Better Future Together"
-        text="Get in touch for a free consultation with the NextGen Building team."
+        text="Get in touch for a free consultation with the NextGen team."
       />
     </>
   )

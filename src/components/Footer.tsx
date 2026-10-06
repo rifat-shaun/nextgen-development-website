@@ -52,9 +52,9 @@ function Footer() {
                 <Logo variant="full" />
               </div>
               <p className="text-center text-[0.95rem] leading-[1.6] text-muted md:max-w-[280px] md:text-left">
-                {COMPANY} is an artisan building company delivering quality craftsmanship with
-                sustainability at its core. We are a partner in creating community-focused,
-                client-driven projects that build a better future.
+                {COMPANY} guides clients towards quality craftsmanship and sustainable outcomes,
+                simplifying and efficiently managing all their real estate needs. We are a partner in
+                creating community-focused, client-driven projects that build a better future.
               </p>
             </div>
           </div>

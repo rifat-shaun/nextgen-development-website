@@ -15,12 +15,13 @@ function ServicesSection() {
             <div className="mx-auto mb-12 max-w-[600px] text-base leading-[1.6] text-[#666] xl:mx-0">
               <p>
                 From house and land packages and turnkey homes to land sales, granny flats, studios,
-                extensions, landscaping, driveways and full renovations, we handle every type of
-                residential build with the same artisan care.
+                extensions, landscaping, driveways and full renovations, we guide you through every
+                type of residential project, connecting you with the right people and the right pathway.
               </p>
               <p>
-                We are also experts in project management, offering both residential and commercial
-                project management. {about.clientCentric}
+                We manage all sorts of real estate services and needs, including residential and
+                commercial project management, to achieve the best real estate solution for you.{' '}
+                {about.clientCentric}
               </p>
             </div>
 
