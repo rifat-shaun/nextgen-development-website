@@ -1,6 +1,7 @@
 import cumberlandRdIngleburn from './assets/projects/cumberland-rd-ingleburn.webp'
 import cumberlandRdIngleburn2 from './assets/projects/cumberland-rd-ingleburn-2.webp'
 import sevenTerraces from './assets/projects/seven-terraces.webp'
+import waratahCrMacquarieFields from './assets/projects/waratah-cr-macquarie-fields.webp'
 import houseLandExterior from './assets/services/house-and-land-exterior.webp'
 
 const img = (id: string, w = 1600) =>
@@ -86,8 +87,16 @@ export const projects: Project[] = [
   },
   {
     title: '7 Terraces',
-    description: 'Part of a 7 terrace project.',
+    address: '85 Cumberland Rd, Ingleburn NSW',
+    status: 'Underway',
+    description: 'Proposed 7 terrace project underway at 85 Cumberland Rd, Ingleburn NSW.',
     image: sevenTerraces,
+  },
+  {
+    title: '2 Freestanding Dwellings',
+    address: '23 Waratah Cr, Macquarie Fields NSW',
+    description: '2 freestanding dwellings at 23 Waratah Cr, Macquarie Fields NSW.',
+    image: waratahCrMacquarieFields,
   },
 ]
 
