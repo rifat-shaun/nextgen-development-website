@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { navItems, PHONES, telHref } from '../data'
 import Logo from './Logo'
 
-const navLink = 'block px-2 py-2 text-[1.075rem] font-medium tracking-wide text-white transition-colors hover:text-accent'
+const navLink = 'block whitespace-nowrap px-2 py-2 text-[1.075rem] font-medium tracking-wide text-white transition-colors hover:text-accent'
 
 function Navbar() {
   const [open, setOpen] = useState(false)
@@ -52,7 +52,7 @@ function Navbar() {
           <div
             className={`${open ? 'block' : 'hidden'} max-h-[calc(100svh-4rem)] w-full overflow-y-auto lg:flex lg:max-h-none lg:w-3/4 lg:items-center lg:overflow-visible`}
           >
-            <ul className="mb-2 mt-2 divide-y divide-white/10 border-t border-white/10 lg:mb-0 lg:mt-0 lg:flex lg:w-2/3 lg:justify-center lg:gap-6 lg:divide-y-0 lg:border-0">
+            <ul className="mb-2 mt-2 divide-y divide-white/10 border-t border-white/10 lg:mb-0 lg:mt-0 lg:flex lg:w-2/3 lg:justify-center lg:gap-1 xl:gap-6 lg:divide-y-0 lg:border-0">
               {navItems.map((item) => {
                 const isOpen = expanded === item.label
                 return (

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
+import Projects from './pages/Projects'
 import ServicePage from './pages/ServicePage'
 import { useReveal } from './useReveal'
 
@@ -36,6 +37,7 @@ function App() {
           {/* Old addresses from when Vision and Mission were separate pages */}
           <Route path="/about/our-vision" element={<Navigate to="/about#our-vision" replace />} />
           <Route path="/about/our-mission" element={<Navigate to="/about#our-mission" replace />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services/:slug" element={<ServicePage />} />
           <Route path="*" element={<Home />} />

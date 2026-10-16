@@ -1,3 +1,6 @@
+import cumberlandRdIngleburn from './assets/projects/cumberland-rd-ingleburn.webp'
+import cumberlandRdIngleburn2 from './assets/projects/cumberland-rd-ingleburn-2.webp'
+import sevenTerraces from './assets/projects/seven-terraces.webp'
 import houseLandExterior from './assets/services/house-and-land-exterior.webp'
 
 const img = (id: string, w = 1600) =>
@@ -22,7 +25,6 @@ export const about = {
     'NextGen is the next step to simplifying and efficiently managing all of your real estate needs. We work with you to achieve the best real estate solution, and we are a partner in creating sustainable, community-focused and client-driven projects that build a better future for our communities.',
 }
 
-// Not shown on the site for now (Project menu removed); kept for a future projects page
 export const allServices = [
   'House & Land Package',
   'Turnkey Home',
@@ -36,14 +38,6 @@ export const allServices = [
 ]
 
 export const projectManagement = ['Residential Project Management', 'Commercial Project Management']
-
-export const projects = [
-  'Waratah Cr, Macquarie Fields',
-  '104 Cumberland Rd, Ingleburn',
-  '85 Cumberland Rd, Ingleburn',
-  '21 Hibiscus Cr, Macquarie Fields',
-  '11/31 Belmont Rd, Glenfield',
-]
 
 export type NavLink = { label: string; href: string }
 
@@ -63,7 +57,38 @@ export const navItems: (NavLink & { children?: NavLink[] })[] = [
       return serviceDetails.map((service) => ({ label: service.title, href: serviceHref(service.slug) }))
     },
   },
+  { label: 'Projects', href: '/projects' },
   { label: 'Contact Us', href: '/contact' },
+]
+
+export type Project = {
+  title: string
+  address?: string
+  status?: string
+  description: string
+  image: string
+}
+
+export const projects: Project[] = [
+  {
+    title: '2 Freestanding Dwellings',
+    address: '104 Cumberland Rd, Ingleburn NSW',
+    status: 'Underway',
+    description: 'Proposed 2 freestanding dwellings underway at 104 Cumberland Rd, Ingleburn NSW.',
+    image: cumberlandRdIngleburn,
+  },
+  {
+    title: '2 Freestanding Dwellings',
+    address: '104 Cumberland Rd, Ingleburn NSW',
+    status: 'Underway',
+    description: 'Part of the 2 freestanding dwellings underway at 104 Cumberland Rd, Ingleburn NSW.',
+    image: cumberlandRdIngleburn2,
+  },
+  {
+    title: '7 Terraces',
+    description: 'Part of a 7 terrace project.',
+    image: sevenTerraces,
+  },
 ]
 
 export const heroSlides = [
