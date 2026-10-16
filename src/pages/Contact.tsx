@@ -4,10 +4,9 @@ import { FiAlertCircle, FiCheckCircle, FiMail, FiMapPin, FiPhone } from 'react-i
 import { useSearchParams } from 'react-router-dom'
 import PageHeader from '../components/PageHeader'
 import Select, { type OptionGroup } from '../components/Select'
-import { ADDRESS, allServices, EMAIL, PERSONAL_EMAIL, PHONE, projectManagement, vision } from '../data'
+import { ADDRESS, allServices, EMAIL, PERSONAL_EMAIL, PHONES, projectManagement, telHref, vision } from '../data'
 
 const contactCards: { icon: IconType; label: string; value: string; href: string }[] = [
-  { icon: FiPhone, label: 'Phone', value: PHONE, href: `tel:${PHONE.replace(/\s/g, '')}` },
   { icon: FiMail, label: 'Email', value: EMAIL, href: `mailto:${EMAIL}` },
   { icon: FiMail, label: 'Personal email', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
   {
@@ -133,6 +132,25 @@ function Contact() {
               </p>
 
               <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
+                {/* Several numbers, so the card itself isn't a link — each number is */}
+                <div className="group flex items-center gap-4 rounded-2xl bg-white p-5 md:gap-3 md:p-4 lg:gap-4 lg:p-5 shadow-[0_2px_15px_rgba(0,0,0,0.07)] transition-[transform,box-shadow] duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_25px_rgba(0,76,145,0.12)]">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand/10 text-lg text-brand transition-colors duration-300 group-hover:bg-brand group-hover:text-white">
+                    <FiPhone />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-sm text-[#6c757d]">Phone</span>
+                    <span className="block font-semibold text-body [overflow-wrap:anywhere] md:text-[0.95rem] lg:text-base">
+                      {PHONES.map((phone, i) => (
+                        <span key={phone}>
+                          {i > 0 && ', '}
+                          <a href={telHref(phone)} className="text-body no-underline hover:text-brand">
+                            {phone}
+                          </a>
+                        </span>
+                      ))}
+                    </span>
+                  </span>
+                </div>
                 {contactCards.map(({ icon: Icon, label, value, href }) => (
                   <a
                     key={label}

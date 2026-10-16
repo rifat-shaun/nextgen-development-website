@@ -2,10 +2,8 @@ import { useEffect, useState } from 'react'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { HiChevronDown } from 'react-icons/hi'
 import { Link, useLocation } from 'react-router-dom'
-import { navItems, PHONE } from '../data'
+import { navItems, PHONES, telHref } from '../data'
 import Logo from './Logo'
-
-const tel = `tel:${PHONE.replace(/\s/g, '')}`
 
 const navLink = 'block px-2 py-2 text-[1.075rem] font-medium tracking-wide text-white transition-colors hover:text-accent'
 
@@ -105,13 +103,19 @@ function Navbar() {
             </ul>
 
             <div className="pb-3 lg:w-1/3 lg:pb-0 lg:text-right">
-              <a
-                href={tel}
-                className="flex items-center justify-center gap-2 rounded-lg bg-accent py-3 text-lg font-medium text-white lg:mr-4 lg:inline-block lg:bg-transparent lg:py-[0.3125rem] lg:text-xl lg:font-normal"
-              >
-                <FaPhoneAlt className="text-sm lg:hidden" />
-                {PHONE}
-              </a>
+              {/* Mobile: one call button per number. Desktop: numbers stacked on the right */}
+              <div className="grid grid-cols-2 gap-2 lg:mr-4 lg:inline-grid lg:grid-cols-1 lg:gap-0">
+                {PHONES.map((phone) => (
+                  <a
+                    key={phone}
+                    href={telHref(phone)}
+                    className="flex items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-accent py-3 font-medium text-white transition-colors lg:justify-end lg:bg-transparent lg:py-0 lg:text-[0.95rem] lg:leading-6 lg:font-normal lg:hover:text-accent"
+                  >
+                    <FaPhoneAlt className="text-sm lg:text-xs" />
+                    {phone}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>

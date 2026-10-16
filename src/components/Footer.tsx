@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
-import { ADDRESS, aboutLinks, COMPANY, EMAIL, PERSONAL_EMAIL, PHONE, serviceDetails, serviceHref, services } from '../data'
+import { ADDRESS, aboutLinks, COMPANY, EMAIL, PERSONAL_EMAIL, PHONES, serviceDetails, serviceHref, services, telHref } from '../data'
 import Logo from './Logo'
 
 // Hidden until the real social media accounts are ready; set to true to show the icons
@@ -96,9 +96,14 @@ function Footer() {
               </p>
               <p>
                 <Strong>Phone:</Strong>{' '}
-                <a href={`tel:${PHONE.replace(/\s/g, '')}`} className="text-white no-underline">
-                  {PHONE}
-                </a>
+                {PHONES.map((phone, i) => (
+                  <span key={phone}>
+                    {i > 0 && ', '}
+                    <a href={telHref(phone)} className="text-white no-underline">
+                      {phone}
+                    </a>
+                  </span>
+                ))}
               </p>
               <p>
                 <Strong>Address:</Strong> {ADDRESS}

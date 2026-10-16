@@ -5,6 +5,8 @@ const img = (id: string, w = 1600) =>
 
 export const COMPANY = 'NextGen Real Estate & Development Consultant'
 export const PHONE = '0470 067 522'
+export const PHONES = [PHONE, '02 8740 0336']
+export const telHref = (phone: string) => `tel:${phone.replace(/\s/g, '')}`
 export const EMAIL = 'info@nextgenbuilding.com.au'
 export const PERSONAL_EMAIL = 'mhasan2167@mail.com'
 export const ADDRESS = '23A Waratah Cr, Macquarie Fields NSW 2564'
