@@ -24,7 +24,7 @@ function Logo({ variant = 'nav' }: Props) {
       </span>
       <span className="flex flex-col font-heading leading-none whitespace-nowrap">
         <span className="text-lg font-semibold tracking-wide">
-          NextGen <span className="font-normal text-white/80">Reality</span>
+          NextGen <span className="font-normal text-white/80">Realty</span>
         </span>
         <span className="mt-1 text-xs tracking-[0.2em] text-white/70 uppercase">&amp; Consultant</span>
       </span>
