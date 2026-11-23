@@ -49,7 +49,7 @@ function Footer() {
           <div className={column}>
             <div className="mb-[30px]">
               <div className="mb-5 flex items-center justify-center gap-[15px] md:justify-start">
-                <Logo variant="full" />
+                <Logo />
               </div>
               <p className="text-center text-[0.95rem] leading-[1.6] text-muted md:max-w-[280px] md:text-left">
                 {COMPANY} guides clients towards quality craftsmanship and sustainable outcomes,

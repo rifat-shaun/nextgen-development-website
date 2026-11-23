@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
@@ -8,6 +8,9 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 import ServicePage from './pages/ServicePage'
 import { useReveal } from './useReveal'
+
+// Loaded on demand so the map library only downloads on project pages
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
 
 // Scroll to the #hash target after navigation, or to the top for a new page
 function useScrollOnNavigate() {
@@ -38,6 +41,14 @@ function App() {
           <Route path="/about/our-vision" element={<Navigate to="/about#our-vision" replace />} />
           <Route path="/about/our-mission" element={<Navigate to="/about#our-mission" replace />} />
           <Route path="/projects" element={<Projects />} />
+          <Route
+            path="/projects/:slug"
+            element={
+              <Suspense fallback={<div className="min-h-svh" />}>
+                <ProjectDetail />
+              </Suspense>
+            }
+          />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services/:slug" element={<ServicePage />} />
           <Route path="*" element={<Home />} />

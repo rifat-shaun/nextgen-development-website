@@ -1,16 +1,14 @@
-import DesignSection from '../components/DesignSection'
 import Hero from '../components/Hero'
-import InteriorSection from '../components/InteriorSection'
 import ReviewsSection from '../components/ReviewsSection'
-import ServicesSection from '../components/ServicesSection'
+import FeaturedProperties from '../components/FeaturedProperties'
+import WhyNextGen from '../components/WhyNextGen'
 
 function Home() {
   return (
     <>
       <Hero />
-      <DesignSection />
-      <InteriorSection />
-      <ServicesSection />
+      <WhyNextGen />
+      <FeaturedProperties />
       <ReviewsSection />
     </>
   )

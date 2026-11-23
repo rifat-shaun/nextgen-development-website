@@ -7,7 +7,7 @@ import houseLandExterior from './assets/services/house-and-land-exterior.webp'
 const img = (id: string, w = 1600) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
 
-export const COMPANY = 'NextGen Real Estate & Development Consultant'
+export const COMPANY = 'NextGen Realty & Consultant'
 export const PHONE = '0470 067 522'
 export const PHONES = [PHONE, '02 8740 0336']
 export const telHref = (phone: string) => `tel:${phone.replace(/\s/g, '')}`
@@ -52,8 +52,11 @@ export const navItems: (NavLink & { children?: NavLink[] })[] = [
   { label: 'About', href: '/about' },
   {
     label: 'Services',
-    href: '/#services',
-    // Built lazily: serviceDetails is declared further down this file
+    // Opens the first service page; the dropdown lists them all.
+    // Getters because serviceDetails is declared further down this file
+    get href() {
+      return serviceHref(serviceDetails[0].slug)
+    },
     get children() {
       return serviceDetails.map((service) => ({ label: service.title, href: serviceHref(service.slug) }))
     },
@@ -63,42 +66,71 @@ export const navItems: (NavLink & { children?: NavLink[] })[] = [
 ]
 
 export type Project = {
+  slug: string
   title: string
-  address?: string
+  // Kind of development, shown under the status line
+  type: string
+  address: string
+  suburb: string
   status?: string
-  description: string
-  image: string
+  // Short line for cards; the detail page shows `description` paragraphs
+  summary: string
+  description: string[]
+  images: string[]
+  // [latitude, longitude] of the site, for the map on the detail page
+  location: [number, number]
+  // Optional facts row, e.g. { label: 'Bedrooms', value: 4 }
+  features?: { label: string; value: string | number }[]
 }
 
 export const projects: Project[] = [
   {
+    slug: '104-cumberland-rd-ingleburn',
     title: '2 Freestanding Dwellings',
+    type: 'Freestanding dwellings',
     address: '104 Cumberland Rd, Ingleburn NSW',
+    suburb: 'Ingleburn',
     status: 'Underway',
-    description: 'Proposed 2 freestanding dwellings underway at 104 Cumberland Rd, Ingleburn NSW.',
-    image: cumberlandRdIngleburn,
+    summary: 'Proposed 2 freestanding dwellings underway at 104 Cumberland Rd, Ingleburn NSW.',
+    description: [
+      'Proposed 2 freestanding dwellings underway at 104 Cumberland Rd, Ingleburn NSW.',
+    ],
+    images: [cumberlandRdIngleburn, cumberlandRdIngleburn2],
+    location: [-34.002009, 150.866104],
+    features: [{ label: 'Dwellings', value: 2 }],
   },
   {
-    title: '2 Freestanding Dwellings',
-    address: '104 Cumberland Rd, Ingleburn NSW',
-    status: 'Underway',
-    description: 'Part of the 2 freestanding dwellings underway at 104 Cumberland Rd, Ingleburn NSW.',
-    image: cumberlandRdIngleburn2,
-  },
-  {
+    slug: '85-cumberland-rd-ingleburn',
     title: '7 Terraces',
+    type: 'Terraces',
     address: '85 Cumberland Rd, Ingleburn NSW',
+    suburb: 'Ingleburn',
     status: 'Underway',
-    description: 'Proposed 7 terrace project underway at 85 Cumberland Rd, Ingleburn NSW.',
-    image: sevenTerraces,
+    summary: 'Proposed 7 terrace project underway at 85 Cumberland Rd, Ingleburn NSW.',
+    description: [
+      'Proposed 7 terrace project underway at 85 Cumberland Rd, Ingleburn NSW.',
+    ],
+    images: [sevenTerraces],
+    location: [-34.002966, 150.863753],
+    features: [{ label: 'Terraces', value: 7 }],
   },
   {
+    slug: '23-waratah-cr-macquarie-fields',
     title: '2 Freestanding Dwellings',
+    type: 'Freestanding dwellings',
     address: '23 Waratah Cr, Macquarie Fields NSW',
-    description: '2 freestanding dwellings at 23 Waratah Cr, Macquarie Fields NSW.',
-    image: waratahCrMacquarieFields,
+    suburb: 'Macquarie Fields',
+    summary: '2 freestanding dwellings at 23 Waratah Cr, Macquarie Fields NSW.',
+    description: [
+      '2 freestanding dwellings at 23 Waratah Cr, Macquarie Fields NSW.',
+    ],
+    images: [waratahCrMacquarieFields],
+    location: [-33.988391, 150.876481],
+    features: [{ label: 'Dwellings', value: 2 }],
   },
 ]
+
+export const projectHref = (slug: string) => `/projects/${slug}`
 
 export const heroSlides = [
   {
@@ -117,13 +149,6 @@ export const heroSlides = [
     text: 'From the first concept to the final handover, we guide you through every step of your real estate journey.',
   },
 ]
-
-export const designImages = {
-  short: img('1586023492125-27b2c045efd7', 600),
-  tall: img('1600210492486-724fe5c67fb0', 600),
-}
-
-export const interiorImage = img('1618220179428-22790b461013', 1200)
 
 // The four services shown as cards on the home page
 export const services = [

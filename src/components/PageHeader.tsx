@@ -6,11 +6,12 @@ type Props = {
   trail: string[]
 }
 
-// Banner at the top of inner pages: background photo, title and breadcrumb
+// Banner at the top of inner pages: background photo, title and breadcrumb.
+// The top padding leaves room for the see-through navbar floating over it
 function PageHeader({ title, image, trail }: Props) {
   return (
     <section
-      className="relative flex min-h-[200px] items-center bg-cover bg-center py-12 md:min-h-[280px]"
+      className="relative flex min-h-[300px] items-center bg-cover bg-center pb-12 pt-[110px] md:min-h-[380px] lg:pt-[150px]"
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/35" />

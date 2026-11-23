@@ -65,9 +65,13 @@ function Contact() {
   const [searchParams] = useSearchParams()
   // Links from service pages pass ?service=<title> to pre-select it
   const requested = searchParams.get('service') ?? ''
+  // The home page search bar also passes ?suburb=<text>, and project pages ?project=<name>
+  const suburb = searchParams.get('suburb')?.trim() ?? ''
+  const project = searchParams.get('project')?.trim() ?? ''
   const [form, setForm] = useState<FormState>({
     ...emptyForm,
     service: serviceGroups.some((g) => g.options.includes(requested)) ? requested : '',
+    message: project ? `Enquiry about: ${project}\n\n` : suburb ? `Location: ${suburb}\n\n` : '',
   })
   const [status, setStatus] = useState<Status>('idle')
 

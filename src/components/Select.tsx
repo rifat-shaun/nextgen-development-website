@@ -12,6 +12,8 @@ type Props = {
   className?: string
   invalid?: boolean
   describedBy?: string
+  // Light text and arrow for use on a dark background (the home page search bar)
+  dark?: boolean
 }
 
 // Custom listbox styled to match the site, replacing the native <select>
@@ -24,6 +26,7 @@ function Select({
   className = '',
   invalid = false,
   describedBy,
+  dark = false,
 }: Props) {
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState(-1)
@@ -127,15 +130,21 @@ function Select({
         onKeyDown={onKeyDown}
         className={`${className} flex items-center justify-between text-left ${
           open
-            ? 'border-brand shadow-[0_0_0_0.25rem_rgba(0,76,145,0.15)]'
+            ? dark
+              ? 'ring-2 ring-inset ring-accent'
+              : 'border-brand shadow-[0_0_0_0.25rem_rgba(0,76,145,0.15)]'
             : invalid
               ? '!border-[#dc3545] shadow-[0_0_0_0.25rem_rgba(220,53,69,0.15)]'
               : ''
         }`}
       >
-        <span className={value ? 'text-body' : 'text-[#9aa0a6]'}>{value || placeholder}</span>
+        <span className={`truncate ${dark ? 'text-white' : value ? 'text-body' : 'text-[#9aa0a6]'}`}>
+          {value || placeholder}
+        </span>
         <FiChevronDown
-          className={`ml-3 shrink-0 text-[#6c757d] transition-transform duration-200 ${open ? 'rotate-180 text-brand' : ''}`}
+          className={`ml-3 shrink-0 transition-transform duration-200 ${dark ? 'text-white/80' : 'text-[#6c757d]'} ${
+            open ? `rotate-180 ${dark ? '' : 'text-brand'}` : ''
+          }`}
         />
       </button>
 

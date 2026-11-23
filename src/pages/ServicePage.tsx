@@ -66,7 +66,7 @@ function ServicePage() {
   const { slug } = useParams()
   const service = serviceDetails.find((s) => s.slug === slug)
 
-  if (!service) return <Navigate to="/#services" replace />
+  if (!service) return <Navigate to="/" replace />
 
   return (
     <>

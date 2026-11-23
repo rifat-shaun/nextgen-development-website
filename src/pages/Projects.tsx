@@ -1,7 +1,8 @@
-import { FiMapPin } from 'react-icons/fi'
+import { FiArrowRight, FiMapPin } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 import CallToAction from '../components/CallToAction'
 import PageHeader from '../components/PageHeader'
-import { projects, vision } from '../data'
+import { projectHref, projects, vision } from '../data'
 
 function Projects() {
   return (
@@ -21,14 +22,15 @@ function Projects() {
           {/* Centered so a short list doesn't sit off to one side */}
           <div className="reveal flex flex-wrap justify-center gap-6">
             {projects.map((project) => (
-              <article
-                key={project.image}
-                className="group w-full overflow-hidden rounded-2xl bg-white shadow-[0_2px_15px_rgba(0,0,0,0.08)] transition-[transform,box-shadow] duration-300 hover:-translate-y-[5px] hover:shadow-[0_15px_35px_rgba(0,76,145,0.15)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+              <Link
+                key={project.slug}
+                to={projectHref(project.slug)}
+                className="group block w-full overflow-hidden rounded-2xl bg-white shadow-[0_2px_15px_rgba(0,0,0,0.08)] transition-[transform,box-shadow] duration-300 hover:-translate-y-[5px] hover:shadow-[0_15px_35px_rgba(0,76,145,0.15)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               >
                 <div className="relative aspect-square overflow-hidden">
                   <img
-                    src={project.image}
-                    alt={project.address ? `${project.title} at ${project.address}` : project.title}
+                    src={project.images[0]}
+                    alt={`${project.title} at ${project.address}`}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   {project.status && (
@@ -39,15 +41,17 @@ function Projects() {
                 </div>
                 <div className="p-6">
                   <h3 className="mb-2 !text-[1.4rem]">{project.title}</h3>
-                  {project.address && (
-                    <p className="mb-3 flex items-center gap-2 text-[0.95rem] font-medium text-brand">
-                      <FiMapPin className="shrink-0" />
-                      {project.address}
-                    </p>
-                  )}
-                  <p className="m-0 text-[0.95rem] leading-[1.7] text-[#666]">{project.description}</p>
+                  <p className="mb-3 flex items-center gap-2 text-[0.95rem] font-medium text-brand">
+                    <FiMapPin className="shrink-0" />
+                    {project.address}
+                  </p>
+                  <p className="mb-4 text-[0.95rem] leading-[1.7] text-[#666]">{project.summary}</p>
+                  <span className="inline-flex items-center gap-1.5 text-[0.95rem] font-medium text-accent">
+                    View project
+                    <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
