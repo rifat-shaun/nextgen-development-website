@@ -1,6 +1,6 @@
 # NextGen Realty & Consultant – Website
 
-Marketing website for **NextGen Realty & Consultant**, a real estate and development consultancy in South West Sydney that guides clients towards quality craftsmanship, green energy solutions and free community library facilities in every project.
+Marketing website for **NextGen Realty & Consultant**, a real estate agency in South West Sydney that guides clients towards quality craftsmanship, green energy solutions and free community library facilities in every project.
 
 Built with React, TypeScript, Vite and Tailwind CSS. The layout and styling follow a Bootstrap-style design system (container widths, spacing and type scale) recreated in Tailwind.
 

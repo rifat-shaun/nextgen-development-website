@@ -8,7 +8,7 @@ const reasons: Reason[] = [
   {
     icon: FiMapPin,
     title: 'About Us',
-    text: 'A real estate and development consultancy guiding you to quality, sustainable homes.',
+    text: 'A real estate agency guiding you to quality, sustainable homes.',
     href: '/about',
   },
   {

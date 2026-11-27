@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
-import { ADDRESS, aboutLinks, COMPANY, EMAIL, PERSONAL_EMAIL, PHONES, serviceDetails, serviceHref, services, telHref } from '../data'
+import { ADDRESS, aboutLinks, COMPANY, EMAIL, PHONES, serviceDetails, serviceHref, services, telHref } from '../data'
 import Logo from './Logo'
 
 // Hidden until the real social media accounts are ready; set to true to show the icons
@@ -86,12 +86,6 @@ function Footer() {
                 <Strong>Email:</Strong>{' '}
                 <a href={`mailto:${EMAIL}`} className="text-white no-underline">
                   {EMAIL}
-                </a>
-              </p>
-              <p>
-                <Strong>Personal Email:</Strong>{' '}
-                <a href={`mailto:${PERSONAL_EMAIL}`} className="text-white no-underline">
-                  {PERSONAL_EMAIL}
                 </a>
               </p>
               <p>

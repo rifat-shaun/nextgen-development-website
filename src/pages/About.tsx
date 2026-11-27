@@ -28,7 +28,6 @@ function About() {
       <section className="bg-mint py-[60px]">
         <div className="container-bs">
           <div className="reveal mx-auto max-w-[820px] text-center">
-            <h2>Who We Are</h2>
             <p className="text-[1.1rem] leading-[1.7]">{about.intro}</p>
             <p className="m-0 leading-[1.7] text-[#6c757d]">{about.summary}</p>
           </div>
