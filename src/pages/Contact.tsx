@@ -4,11 +4,10 @@ import { FiAlertCircle, FiCheckCircle, FiMail, FiMapPin, FiPhone } from 'react-i
 import { useSearchParams } from 'react-router-dom'
 import PageHeader from '../components/PageHeader'
 import Select, { type OptionGroup } from '../components/Select'
-import { ADDRESS, allServices, EMAIL, PERSONAL_EMAIL, PHONES, projectManagement, telHref, vision } from '../data'
+import { ADDRESS, allServices, EMAIL, PHONES, projectManagement, telHref, vision } from '../data'
 
 const contactCards: { icon: IconType; label: string; value: string; href: string }[] = [
   { icon: FiMail, label: 'Email', value: EMAIL, href: `mailto:${EMAIL}` },
-  { icon: FiMail, label: 'Personal email', value: PERSONAL_EMAIL, href: `mailto:${PERSONAL_EMAIL}` },
   {
     icon: FiMapPin,
     label: 'Office',

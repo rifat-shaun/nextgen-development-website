@@ -83,7 +83,7 @@ src/
 
 Almost everything you'd want to change lives in **`src/data.ts`**:
 
-- **Contact details**: `PHONE`, `EMAIL`, `PERSONAL_EMAIL`, `ADDRESS`
+- **Contact details**: `PHONE`, `EMAIL`, `ADDRESS`
 - **About text**: `about`, `vision`, `mission`
 - **Hero slides**: `heroSlides`
 - **Home page service cards**: `services`
