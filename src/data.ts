@@ -16,7 +16,7 @@ export const ADDRESS = '23A Waratah Cr, Macquarie Fields NSW 2564'
 
 export const about = {
   intro:
-    'NextGen is a real estate agency that guides clients towards quality craftsmanship while prioritising sustainability. We help you integrate green energy solutions into every project and lead you along the right pathway, so that every property meets the highest standards of quality and contributes positively to the environment.',
+    'NextGen Realty & Consultant guides clients towards quality craftsmanship while prioritising sustainability. We help you integrate green energy solutions into every project and lead you along the right pathway, so that every property meets the highest standards of quality and contributes positively to the environment.',
   community:
     'Every project we take on comes with a unique offering: free community library facilities. This commitment is a core part of our values and a prerequisite for project acceptance. We believe that enhancing community resources fosters a sense of belonging and supports lifelong learning.',
   clientCentric:
